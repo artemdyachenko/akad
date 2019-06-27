@@ -1,0 +1,26 @@
+// Breadcrumbs
+
+.breadcrumbs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+    &__item {
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-grey;
+
+        &:not(:last-child):after {
+            content: '/';
+            display: inline-block;
+            margin: 0 10px 0 5px;
+        }
+    }
+
+    &__link {
+        color: $color-grey;
+    }
+}

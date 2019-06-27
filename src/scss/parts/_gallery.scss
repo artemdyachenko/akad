@@ -1,0 +1,41 @@
+// Gallery
+
+.gallery-item {
+    display: inline-block;
+    padding: 10px;
+    width: 33%;
+
+    img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+ }
+
+ .gallery-nav {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+
+    &__item {
+        margin-bottom: 30px;
+    }
+
+    &__btn {
+        display: inline-block;
+        padding: 5px 20px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+        color: $color-grey;
+        transition: .3s ease-in-out;
+        transform: translateX(20px);
+
+        &.is-active {
+            background-color: $color-green;
+            color: $color-white;
+            transform: translateX(0);
+        }
+    }
+ }

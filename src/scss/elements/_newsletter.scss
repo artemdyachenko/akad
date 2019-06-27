@@ -1,0 +1,29 @@
+// Newsletter
+
+.newsletter {
+
+    &-box {
+        padding: 20px 30px;
+        background-color: $color-white;
+    }
+
+    &-form {
+        display: flex;
+
+        &__input {
+            flex-grow: 1;
+            padding: 0 20px;
+            border: 1px solid rgba($color-black, .1);
+            border-right: none;
+            text-transform: uppercase;
+
+            &::placeholder {
+                color: #cdcdcd;
+            }
+        }
+
+        &__btn {
+
+        }
+    }
+}

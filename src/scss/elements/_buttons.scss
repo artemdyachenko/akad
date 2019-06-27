@@ -1,0 +1,30 @@
+// Buttons
+
+.button {
+    padding: 20px 40px;
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-green;
+    border: 2px solid $color-green;
+    transition: .3s ease-in-out;
+
+    &:hover {
+        text-decoration: none;
+        background-color: transparent;
+        color: $color-green;
+    }
+
+    &--white {
+        color: $color-green;
+        background-color: $color-white;
+        border-color: $color-white;
+
+        &:hover {
+            color: $color-white;
+        }
+    }
+}
