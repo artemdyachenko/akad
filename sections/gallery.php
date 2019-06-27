@@ -40,33 +40,25 @@
 				</div>
 				<div class="col-md-9">
 					<div class="gallery-box js-gallery-box">
-						<div class="gallery-item webdesign">
-							<img src="img/gallery-img-01.jpg" alt="">
+
+						<?php
+						$args = array(
+							'post_type' => 'portfolio'
+						);
+
+						$post_query = new WP_Query($args);
+
+						if ( $post_query->have_posts() ) {while ( $post_query->have_posts() ) { $post_query->the_post();
+						?>
+
+						<div class="gallery-item <?php echo get_field('portfolio_category')  ?>">
+							<img src="<?php echo get_field('portfolio_image')  ?>" alt="">
 						</div>
-						<div class="gallery-item graphic">
-							<img src="img/gallery-img-02.jpg" alt="">
-						</div>
-						<div class="gallery-item fashion">
-							<img src="img/gallery-img-03.jpg" alt="">
-						</div>
-						<div class="gallery-item logo">
-							<img src="img/gallery-img-04.jpg" alt="">
-						</div>
-						<div class="gallery-item webdesign">
-							<img src="img/gallery-img-05.jpg" alt="">
-						</div>
-						<div class="gallery-item graphic">
-							<img src="img/gallery-img-06.jpg" alt="">
-						</div>
-						<div class="gallery-item fashion">
-							<img src="img/gallery-img-07.jpg" alt="">
-						</div>
-						<div class="gallery-item logo">
-							<img src="img/gallery-img-08.jpg" alt="">
-						</div>
-						<div class="gallery-item webdesign">
-							<img src="img/gallery-img-02.jpg" alt="">
-						</div>
+
+						<?php } } else { ?>
+						<p>Записей нет.</p>
+						<?php } ?>
+
 					</div>
 				</div>
 			</div>
