@@ -38,8 +38,8 @@
 						</li>
 					</ul>
 				</div>
-				<div class="col-md-9">
-					<div class="gallery-box js-gallery-box">
+				<a class="col-md-9">
+					<a class="gallery-box js-gallery-box">
 
 						<?php
 						$args = array(
@@ -51,15 +51,15 @@
 						if ( $post_query->have_posts() ) {while ( $post_query->have_posts() ) { $post_query->the_post();
 						?>
 
-						<div class="gallery-item <?php echo get_field('portfolio_category')  ?>">
+						<a href="<?php echo get_field('portfolio_image') ?>" class="gallery-item <?php echo get_field('portfolio_category')  ?>">
 							<img src="<?php echo get_field('portfolio_image')  ?>" alt="">
-						</div>
+						</a>
 
 						<?php } } else { ?>
 						<p>Записей нет.</p>
 						<?php } ?>
 
-					</div>
+					</a>
 				</div>
 			</div>
 		</div>

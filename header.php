@@ -13,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700&display=swap"
         rel="stylesheet">
     <link href="https://unpkg.com/ionicons@4.5.9-1/dist/css/ionicons.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/build/css/style.min.css">
 

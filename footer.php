@@ -1,3 +1,5 @@
+<?php wp_footer(); ?>
+
 <section class="page-section bg-primary">
     <div class="container">
         <div class="row">
@@ -14,10 +16,7 @@
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
                         incididunt ut labore et dolore magna aliqua.
                     </p>
-                    <form action="" class="newsletter-form">
-                        <input type="email" class="newsletter-form__input" placeholder="your email">
-                        <input type="submit" class="newsletter-form__btn button" value="send">
-                    </form>
+                    <?php echo do_shortcode('[contact-form-7 title="Newsletter form"]') ?>
                 </div>
             </div>
         </div>
@@ -54,12 +53,20 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
     </script>
-
     <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
 
     <script src="<?php echo get_template_directory_uri(); ?>/build/js/script.min.js"></script>
 
-    <?php wp_footer(); ?>
+    <script>
+        $('.js-gallery-box').magnificPopup({
+            delegate: 'a',
+            type: 'image',
+            gallery:{
+                enabled:true
+            }
+        });
+    </script>
 
 </body>
 
